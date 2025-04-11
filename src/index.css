@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 @import "tailwindcss";
 
 .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
@@ -29,10 +31,10 @@
 
 .heading{
 
-        font-family: Melete;
-        font-size: 20px;
-        font-weight: 600;
- 
+
+   
+        font-family: 'Orbitron', sans-serif;
+   
 }
 
 @media (max-width: 768px) {
