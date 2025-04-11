@@ -13,8 +13,8 @@
     }
 }
 @media (max-width: 375px) {
-    .css-11s3esg-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
-        width: 100px !important;
+    .css-n4rwve-MuiFormControl-root{
+        width: 50px !important;
         padding-left: 10px !important;
     }
 }
