@@ -258,8 +258,8 @@ const Login = () => {
 
   return (
     <div className="flex flex-col w-full justify-start items-center gap-5 ">
-      <div className="lg:pt-12 w-full max-w-md rounded-2xl">
-        <p className=" heading text-2xl fon font-semibold text-center tracking-widest ">
+      <div className="lg:pt-12  w-full max-w-md rounded-2xl">
+        <p className=" heading text-2xl mb-4 font-semibold text-center tracking-widest ">
           REGISTER
         </p>
         <div className="flex flex-col ">

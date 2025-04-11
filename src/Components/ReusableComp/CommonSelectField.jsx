@@ -24,7 +24,13 @@ export default function CommonSelectField({ select, formik }) {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           displayEmpty
-          sx={{ borderRadius: "15px" }}
+          sx={{
+            borderRadius: "10px",
+            "& .MuiSelect-select": {
+              padding: "10px 14px",
+              fontSize: "0.8rem",
+            },
+          }}
         >
           <MenuItem disabled value="">
             <p className="text-gray-400">Select One</p>

@@ -42,21 +42,35 @@ const CommmonTextField = ({ fields, formik }) => {
               helperText={
                 formik.touched[fields.name] && formik.errors[fields.name]
               }
+              FormHelperTextProps={{
+                sx: {
+                  position: "absolute",
+                  bottom: -3, // Adjust based on spacing needs
+                  left: 0,
+                  fontSize: "0.75rem",
+                },
+              }}
               value={formik?.values[fields.name]}
               multiline={fields.type === "auth_key"}
-              rows={fields.type === "auth_key" ? 4 : undefined}
               InputProps={{
                 startAdornment: fields.icon && (
                   <div className="px-4 text-gray-500">{fields.icon}</div>
                 ),
               }}
               sx={{
+                "& .MuiFormHelperText-root": {
+                  height: "0", // Prevent height shift
+                },
                 "& .MuiOutlinedInput-root": {
                   width: fields.width,
-                  height: fields.height,
-                  borderRadius: "15px",
+                  // height: fields.height,
+                  borderRadius: "10px",
                   padding: "0.2px ",
+                  height: "2.9rem",
+                  fontSize: "0.8rem",
                 },
+                position: "relative", // Required to anchor absolute helper text
+                marginBottom: "5px", // Ensure space below TextField
               }}
             />
           </>
