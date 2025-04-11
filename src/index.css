@@ -7,18 +7,18 @@
     padding: 15px !important;
 } */
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     .css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
         padding: 9px !important;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     .css-11s3esg-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
-        width: 80px !important;
+        width: 100px !important;
         padding-left: 10px !important;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 768px) {
 .css-1yo9csk{
         margin: 4px !important;
     }
@@ -31,7 +31,7 @@
 
 
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {
     .css-2u11ia-MuiInputBase-input-MuiOutlinedInput-input {
         padding: 8px !important  ;
     }
