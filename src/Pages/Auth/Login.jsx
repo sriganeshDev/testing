@@ -168,6 +168,8 @@ import React from "react";
 import CommmonTextField from "../../Components/ReusableComp/CommonTextField";
 import CommonSelectField from "../../Components/ReusableComp/CommonSelectField";
 import CommonButton from "../../Components/ReusableComp/CommonButton";
+import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import { FaIdBadge } from "react-icons/fa";
 
 const Login = () => {
   const formik = useFormik({
@@ -207,31 +209,35 @@ const Login = () => {
   const fields = [
     {
       name: "username",
-      type: "username",
+      type: "text",
       id: "username",
       label: "UserName",
-      placeholder: "please Enter your UserName",
+      placeholder: "Please Enter your UserName",
+      icon: <FaUser />,
     },
     {
       name: "email",
       type: "email",
       id: "email",
       label: "Email",
-      placeholder: "please Enter your Email",
+      placeholder: "Please Enter your Email",
+      icon: <FaEnvelope />,
     },
     {
       name: "password",
       type: "password",
       id: "password",
       label: "Password",
-      placeholder: "please enter your password",
+      placeholder: "Please enter your Password",
+      icon: <FaLock />,
     },
     {
       name: "confirmpassword",
-      type: "confirmpassword",
+      type: "password",
       id: "confirmpassword",
-      label: "ConfirmPassword",
-      placeholder: "please enter your Confirmpassword",
+      label: "Confirm Password",
+      placeholder: "Please enter your Confirm Password",
+      icon: <FaLock />,
     },
   ];
 
@@ -251,19 +257,19 @@ const Login = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full justify-around gap-5 items-center p-4">
+    <div className="flex flex-col w-full justify-around gap-5 items-center lg:p-4">
       <div className="lg:p-6 w-full max-w-md rounded-2xl">
         <p className="text-2xl font-semibold text-center tracking-widest">
           REGISTER
         </p>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col ">
           {fields.map((field) => (
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
 
-          <div className="flex flex-wrap md:flex-nowrap gap-2">
+          <div className="flex w-full mt-2.5 ">
             {Select_Values.map((select) => (
-              <div className="flex-1 min-w-[45%]">
+              <div className="w-[90%] lg:px-2 ">
                 <CommonSelectField
                   key={select.id}
                   select={select}
@@ -273,19 +279,22 @@ const Login = () => {
             ))}
           </div>
 
-          {(formik.values.colan === "Freasher" ||
-            formik.values.colan === "Experience") && (
-            <CommmonTextField
-              fields={{
-                name: "employeeId",
-                type: "text",
-                id: "employeeId",
-                label: "Employee Id",
-                placeholder: "Please provide Employee Id ",
-              }}
-              formik={formik}
-            />
-          )}
+          <div className="mt-2">
+            {(formik.values.colan === "Freasher" ||
+              formik.values.colan === "Experience") && (
+              <CommmonTextField
+                fields={{
+                  name: "employeeId",
+                  type: "text",
+                  id: "employeeId",
+                  label: "Employee Id",
+                  placeholder: "Please provide Employee Id ",
+                  icon: <FaIdBadge />,
+                }}
+                formik={formik}
+              />
+            )}
+          </div>
 
           <div className="flex justify-center mt-5">
             <CommonButton

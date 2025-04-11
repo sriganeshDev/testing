@@ -45,11 +45,17 @@ const CommmonTextField = ({ fields, formik }) => {
               value={formik?.values[fields.name]}
               multiline={fields.type === "auth_key"}
               rows={fields.type === "auth_key" ? 4 : undefined}
+              InputProps={{
+                startAdornment: fields.icon && (
+                  <div className="px-4 text-gray-500">{fields.icon}</div>
+                ),
+              }}
               sx={{
                 "& .MuiOutlinedInput-root": {
                   width: fields.width,
                   height: fields.height,
-                  borderRadius: "20px",
+                  borderRadius: "15px",
+                  padding: "0.2px ",
                 },
               }}
             />

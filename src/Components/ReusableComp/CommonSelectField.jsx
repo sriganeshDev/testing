@@ -9,7 +9,7 @@ export default function CommonSelectField({ select, formik }) {
     <div>
       <FormControl
         required
-        sx={{ m: 1, minWidth: "100%" }}
+        sx={{ minWidth: "100%" }}
         error={Boolean(
           formik.touched[select.name] && formik.errors[select.name]
         )}
@@ -24,10 +24,10 @@ export default function CommonSelectField({ select, formik }) {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           displayEmpty
-          sx={{ borderRadius: "20px" }}
+          sx={{ borderRadius: "15px" }}
         >
           <MenuItem disabled value="">
-            <em>Select One</em>
+            <p className="text-gray-400">Select One</p>
           </MenuItem>
           {select?.names.map((val) => (
             <MenuItem key={val} value={val}>
