@@ -36,7 +36,7 @@ const AuthParent = () => {
     <>
       <div className="flex flex-col md:flex-row h-screen">
         <div
-          className="relative w-full md:w-1/2 h-1/4 mb-13 md:h-full max-md:rounded-xl flex justify-center items-center bg-cover bg-center"
+          className="relative w-full md:w-1/2 h-1/4 mb-15 md:h-full max-md:rounded-xl flex justify-center items-center bg-cover bg-center"
           style={{
             backgroundImage: `url(https://img.freepik.com/premium-photo/table-with-many-dishes-including-food-including-rice-veggies-other-foods_1086760-97540.jpg?w=1380)`,
           }}
@@ -44,7 +44,7 @@ const AuthParent = () => {
           <div className="absolute inset-0  max-md:bg-gradient-to-t from-gray-900/60  to-gray-300/20 z-0"></div>
         </div>
 
-        <div className="w-full  md:w-1/2 h-2/3 md:h-full lg:bg-gray-100 flex justify-center items-center  lg:p-6 max-md:p-5">
+        <div className="w-full  md:w-1/2 h-2/3 md:h-full lg:bg-gray-100 flex justify-center items-center lg:p-6 max-md:p-3">
           <Outlet />
         </div>
       </div>

@@ -246,7 +246,7 @@ const Login = () => {
       name: "colan",
       id: "colan",
       names: ["Freasher", "Experience"],
-      label: "Work Type",
+      label: "Colan",
     },
     {
       name: "others",

@@ -3,24 +3,18 @@
 .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
     padding: 5px !important;
 }
-/* .css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
-    padding: 15px !important;
-} */
 
 @media (max-width: 768px) {
     .css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
         padding: 9px !important;
     }
 }
-@media (max-width: 375px) {
-    .css-n4rwve-MuiFormControl-root{
-        width: 50px !important;
+@media (max-width: 768px) {
+    .css-11s3esg-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+        width: 100px !important;
         padding-left: 10px !important;
     }
-    .css-1fa8j32{
-        width: 50px !important;
-        padding-left: 10px !important;
-    }
+  
 
 }
 @media (max-width: 768px) {
@@ -28,11 +22,6 @@
         margin: 4px !important;
     }
 }
-/* @media (max-width: 768px) {
-    .css-v55yws-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
-      width: 100px;
-    }
-} */
 
 
 
@@ -41,8 +30,3 @@
         padding: 8px !important  ;
     }
 }
-/* @media (max-width: 368px) {
-.css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
-        height:1.2em  !important  ;
-    }
-} */
