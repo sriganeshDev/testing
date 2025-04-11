@@ -6,7 +6,7 @@
 
 @media (max-width: 768px) {
     .css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
-        padding: 9px !important;
+        padding: 8px !important;
     }
 }
 /* @media (max-width: 768px) {
@@ -24,6 +24,13 @@
 }
 
 
+.heading{
+
+        font-family: Melete;
+        font-size: 20px;
+        font-weight: 600;
+ 
+}
 
 @media (max-width: 768px) {
     .css-2u11ia-MuiInputBase-input-MuiOutlinedInput-input {

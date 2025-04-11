@@ -193,12 +193,12 @@ const Login = () => {
       confirmpassword: Yup.string()
         .required("Confirm Password is required")
         .oneOf([Yup.ref("password")], "Passwords must match"),
-      colan: Yup.string().required("Please select your work type"),
-      others: Yup.string().required("Please select an option"),
+      colan: Yup.string(),
+      others: Yup.string(),
       employeeId: Yup.string().when("colan", {
         is: (val) => val === "Freasher" || val === "Experience",
-        then: Yup.string().required("This field is required"),
-        otherwise: Yup.string(),
+        then: () => Yup.string(),
+        otherwise: () => Yup.string(),
       }),
     }),
     onSubmit: async (val) => {
@@ -257,9 +257,9 @@ const Login = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full justify-around gap-5 items-center lg:p-4">
-      <div className="lg:p-6 w-full max-w-md rounded-2xl">
-        <p className="text-2xl font-semibold text-center tracking-widest">
+    <div className="flex flex-col w-full justify-start items-center gap-5 ">
+      <div className="lg:pt-12 w-full max-w-md rounded-2xl">
+        <p className=" heading text-2xl fon font-semibold text-center tracking-widest ">
           REGISTER
         </p>
         <div className="flex flex-col ">
