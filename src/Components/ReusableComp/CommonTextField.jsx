@@ -8,7 +8,7 @@ const CommmonTextField = ({ fields, formik }) => {
     <div className="w-full">
       <Box
         key={fields.id}
-        sx={{ m: 1, width: "96%" }}
+        sx={{ m: 1, width: "100%" }}
         className=" flex flex-col"
       >
         {fields.type === "checkbox" ? (

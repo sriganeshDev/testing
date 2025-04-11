@@ -9,7 +9,7 @@ export default function CommonSelectField({ select, formik }) {
     <div>
       <FormControl
         required
-        sx={{ minWidth: "100%" }}
+        sx={{ m: 1, minWidth: "100%" }}
         error={Boolean(
           formik.touched[select.name] && formik.errors[select.name]
         )}
