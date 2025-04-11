@@ -6,11 +6,7 @@ import { Checkbox, FormControlLabel } from "@mui/material";
 const CommmonTextField = ({ fields, formik }) => {
   return (
     <div className="w-full">
-      <Box
-        key={fields.id}
-        sx={{ m: 1, width: "100%" }}
-        className=" flex flex-col"
-      >
+      <Box key={fields.id} sx={{ minWidth: "96%" }} className=" flex flex-col">
         {fields.type === "checkbox" ? (
           <FormControlLabel
             control={
