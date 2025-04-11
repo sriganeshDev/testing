@@ -9,14 +9,14 @@
         padding: 9px !important;
     }
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .css-11s3esg-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
         width: 100px !important;
         padding-left: 10px !important;
     }
   
 
-}
+} */
 @media (max-width: 768px) {
 .css-1yo9csk{
         margin: 4px !important;

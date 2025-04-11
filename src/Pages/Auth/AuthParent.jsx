@@ -34,9 +34,9 @@ import { Outlet } from "react-router-dom";
 const AuthParent = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row h-screen">
+      <div className="flex flex-col md:flex-row h-screen gap-6">
         <div
-          className="relative w-full md:w-1/2 h-1/4 mb-15 md:h-full max-md:rounded-xl flex justify-center items-center bg-cover bg-center"
+          className="relative w-full md:w-1/2 h-1/4  md:h-full max-md:rounded-xl flex justify-center items-center bg-cover bg-center"
           style={{
             backgroundImage: `url(https://img.freepik.com/premium-photo/table-with-many-dishes-including-food-including-rice-veggies-other-foods_1086760-97540.jpg?w=1380)`,
           }}
