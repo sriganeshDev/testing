@@ -267,7 +267,7 @@ const Login = () => {
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
 
-          <div className="flex w-full mt-2.5 ">
+          <div className="flex w-full mt-2.5 gap-4 ">
             {Select_Values.map((select) => (
               <div className="w-[90%] lg:px-2 ">
                 <CommonSelectField
