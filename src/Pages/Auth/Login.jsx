@@ -257,7 +257,7 @@ const Login = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full justify-around max-md:gap-5 items-center lg:p-4">
+    <div className="flex flex-col w-full justify-around gap-5 items-center lg:p-4">
       <div className="lg:p-6 w-full max-w-md rounded-2xl">
         <p className="text-2xl font-semibold text-center tracking-widest">
           REGISTER

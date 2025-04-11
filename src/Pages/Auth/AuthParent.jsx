@@ -34,7 +34,7 @@ import { Outlet } from "react-router-dom";
 const AuthParent = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row h-screen gap-6">
+      <div className="flex flex-col md:flex-row h-screen max-md:gap-6">
         <div
           className="relative w-full md:w-1/2 h-1/4  md:h-full max-md:rounded-xl flex justify-center items-center bg-cover bg-center"
           style={{
