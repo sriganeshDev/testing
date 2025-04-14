@@ -115,7 +115,7 @@
 import { useFormik } from "formik";
 import React from "react";
 import * as Yup from "yup";
-import { FaEnvelope, FaLock } from "react-icons/fa";
+import { FaArrowRight, FaEnvelope, FaLock } from "react-icons/fa";
 import CommonButton from "../../Components/ReusableComp/CommonButton";
 import CommmonTextField from "../../Components/ReusableComp/CommonTextField";
 import { Link } from "react-router-dom";
@@ -158,24 +158,39 @@ const Login = () => {
     },
   ];
   return (
-    <div className="flex flex-col w-full min-md:justify-center min-md:h-screen min-md:items-center gap-5 ">
+    <div className="flex flex-col w-full min-md:justify-center  min-md:h-screen min-md:items-center gap-5 ">
       <div className="lg:pt-12  w-full max-w-md rounded-2xl">
-        <p className=" heading text-2xl mb-4 font-semibold text-center tracking-widest ">
-          WELCOME BACK
+        <p className=" heading max-md:w-[28%] sm::relative bottom-5   max-md:border-b-2 pb-2 border-blue-400 max-md:text-lg text-2xl mb-4 font-semibold sm:text-start lg:text-center tracking-widest ">
+          Sign in
         </p>
         <div className="flex flex-col gap-3 ">
           {fields.map((field) => (
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
-
+          <div className="flex items-center justify-between px-1 text-sm text-gray-600">
+            <label className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                name="remember"
+                className="accent-blue-500"
+              />
+              Remember me
+            </label>
+            <Link
+              to="/forgot-password"
+              className="text-blue-500 hover:underline"
+            >
+              Forgot Password?
+            </Link>
+          </div>
           <p className="text-sm w-full justify-start pl-2  text-gray-600">
             If you are not registered, please{" "}
-            <Link to="/register">
+            <Link to="register">
               <span className="text-blue-400 cursor-pointer">Sign Up</span>
             </Link>
           </p>
 
-          <div className="flex justify-center mt-5">
+          <div className="flex max-sm:hidden justify-center mt-5">
             <CommonButton
               buttonName={"Login"}
               type="submit"
@@ -196,6 +211,15 @@ const Login = () => {
                 color: "#202b61",
               }}
             />
+          </div>
+
+          <div className="flex  md:hidden lg:hidden justify-end mt-8">
+            <button
+              onClick={formik.handleSubmit}
+              className="flex items-center gap-2 text-black  px-4 py-2 rounded-full transition-all duration-300"
+            >
+              Continue <FaArrowRight />
+            </button>
           </div>
         </div>
       </div>
