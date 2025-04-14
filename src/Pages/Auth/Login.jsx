@@ -49,7 +49,7 @@ const Login = () => {
         <p className=" heading text-2xl mb-4 font-semibold text-center tracking-widest ">
           WELCOME BACK
         </p>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-3 ">
           {fields.map((field) => (
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
@@ -62,7 +62,7 @@ const Login = () => {
           </div>
 
           {/* Social Login Options */}
-          <div className="flex flex-col gap-3 mb-4 px-2">
+          <div className="flex flex-col gap-3  px-2">
             <button className="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition duration-150">
               <img
                 src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -75,7 +75,7 @@ const Login = () => {
             </button>
           </div>
 
-          <p className="text-sm w-full justify-start pl-2 py-1 text-gray-600">
+          <p className="text-sm w-full justify-start pl-2  text-gray-600">
             If you are not registered, please{" "}
             <Link to="/register">
               <span className="text-blue-400 cursor-pointer">Sign Up</span>

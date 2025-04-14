@@ -383,9 +383,23 @@ const Register = () => {
       confirmpassword: Yup.string()
         .required("Confirm Password is required")
         .oneOf([Yup.ref("password")], "Passwords must match"),
-      employeeId: Yup.string().when("colan", {
-        is: (val) => val === "Fresher" || val === "Experience",
-        then: () => Yup.string().required("Employee ID is required"),
+      Select_Company: Yup.string().required("Select Company is required"),
+      colan: Yup.string().when("Select_Company", {
+        is: "Colan",
+        then: Yup.string().required("Colan Type is required"),
+        otherwise: Yup.string().notRequired(),
+      }),
+      employeeId: Yup.string().when(["Select_Company", "colan"], {
+        is: (Select_Company, colan) =>
+          Select_Company === "Colan" &&
+          ["Fresher", "Experience"].includes(colan),
+        then: Yup.string().required("Employee ID is required"),
+        otherwise: Yup.string().notRequired(),
+      }),
+      othercompany: Yup.string().when("Select_Company", {
+        is: "Others",
+        then: Yup.string().required("Company Name is required"),
+        otherwise: Yup.string().notRequired(),
       }),
     }),
     onSubmit: async (val) => {
@@ -434,12 +448,11 @@ const Register = () => {
         <p className="heading text-2xl mb-4 font-semibold text-center tracking-widest">
           REGISTER
         </p>
-        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-2">
+        <form onSubmit={formik.handleSubmit} className="flex flex-col gap-3">
           {fields.map((field) => (
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
 
-          {/* Select Company Dropdown */}
           <div className="w-full mt-2">
             <CommonSelectField
               select={{
@@ -452,7 +465,6 @@ const Register = () => {
             />
           </div>
 
-          {/* Show Colan dropdown if Colan is selected */}
           {formik.values.Select_Company === "Colan" && (
             <div className="w-full mt-2">
               <CommonSelectField
@@ -467,7 +479,6 @@ const Register = () => {
             </div>
           )}
 
-          {/* Show Employee ID only if Colan type is selected */}
           {formik.values.Select_Company === "Colan" &&
             ["Fresher", "Experience"].includes(formik.values.colan) && (
               <div className="w-full mt-2">
@@ -485,7 +496,6 @@ const Register = () => {
               </div>
             )}
 
-          {/* Show Other Company input only if Others is selected */}
           {formik.values.Select_Company === "Others" && (
             <div className="w-full mt-2">
               <CommmonTextField
@@ -493,7 +503,7 @@ const Register = () => {
                   name: "othercompany",
                   type: "text",
                   id: "othercompany",
-                  label: "Other Company",
+                  label: "Company Name ",
                   placeholder: "Enter your Company Name",
                   icon: <FaIdBadge />,
                 }}
@@ -502,7 +512,6 @@ const Register = () => {
             </div>
           )}
 
-          {/* Sign In link */}
           <p className="text-sm w-full justify-start pl-2 py-2.5 text-gray-600">
             If already registered? Please{" "}
             <Link to={"/"}>
@@ -510,7 +519,6 @@ const Register = () => {
             </Link>
           </p>
 
-          {/* Register Button */}
           <div className="flex justify-center mt-4">
             <CommonButton
               buttonName={"Register"}
