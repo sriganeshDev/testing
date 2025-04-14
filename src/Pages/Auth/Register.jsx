@@ -444,8 +444,8 @@ const Register = () => {
 
   return (
     <div className="flex flex-col w-full justify-start items-center gap-5">
-      <div className="lg:pt-12 w-full max-w-md rounded-2xl p-3">
-        <p className="heading text-2xl mb-4 font-semibold text-center tracking-widest">
+      <div className="lg:pt-12 w-full max-w-md rounded-2xl ">
+        <p className=" heading max-md:w-[28%] sm::relative bottom-5   max-md:border-b-2 pb-2 border-blue-400 max-md:text-lg text-2xl mb-4 font-semibold sm:text-start lg:text-center tracking-widest ">
           REGISTER
         </p>
         <form onSubmit={formik.handleSubmit} className="flex flex-col gap-3">
