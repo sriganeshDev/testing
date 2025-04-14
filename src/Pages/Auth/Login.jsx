@@ -167,13 +167,6 @@ const Login = () => {
           {fields.map((field) => (
             <CommmonTextField key={field.id} fields={field} formik={formik} />
           ))}
-
-          <p className="text-sm w-full justify-start pl-2  text-gray-600">
-            If you are not registered, please{" "}
-            <Link to="/register">
-              <span className="text-blue-400 cursor-pointer">Sign Up</span>
-            </Link>
-          </p>
           <div className="flex items-center justify-between px-1 text-sm text-gray-600">
             <label className="flex items-center gap-2">
               <input
@@ -190,8 +183,14 @@ const Login = () => {
               Forgot Password?
             </Link>
           </div>
+          <p className="text-sm w-full justify-start pl-2  text-gray-600">
+            If you are not registered, please{" "}
+            <Link to="register">
+              <span className="text-blue-400 cursor-pointer">Sign Up</span>
+            </Link>
+          </p>
 
-          <div className="flex justify-center mt-5">
+          <div className="flex max-sm:hidden justify-center mt-5">
             <CommonButton
               buttonName={"Login"}
               type="submit"
@@ -213,7 +212,8 @@ const Login = () => {
               }}
             />
           </div>
-          <div className="flex justify-end mt-4">
+
+          <div className="flex  md:hidden lg:hidden justify-end mt-8">
             <button
               onClick={formik.handleSubmit}
               className="flex items-center gap-2 text-black  px-4 py-2 rounded-full transition-all duration-300"
