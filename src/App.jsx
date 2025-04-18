@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Register from "./Pages/Auth/Register";
 import Login from "./Pages/Auth/Login";
-import CommonMenu from "../src/Pages/Com-HeaderandFooter/CommonMenu";
+import Home from "./Pages/Com-HeaderandFooter/Home";
 import UserDashboard from "./Pages/AdminAndUserDashboard/UserDashboard";
 import AdminDashboard from "./Pages/AdminAndUserDashboard/AdminDashboard";
 import OnBoardScreen1 from "./Components/OnboardingScreen/OnBoardScreen2";
@@ -21,8 +21,9 @@ const App = () => {
           <Route path="register" element={<Register />} />
         </Route>
 
+
         {/* Dashboard */}
-        <Route path="/commonMenu" element={<CommonMenu/>}>
+        <Route path="/home" element={<Home/>}>
   <Route index element={<AdminDashboard/>} />
   <Route path="userDashboard" element={<UserDashboard/>} />
   <Route path="admindashboard" element={<AdminDashboard/>} />
