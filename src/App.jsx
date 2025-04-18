@@ -8,7 +8,7 @@ import Login from "./Pages/Auth/Login";
 import CommonMenu from "../src/Pages/Com-HeaderandFooter/CommonMenu";
 import UserDashboard from "./Pages/AdminAndUserDashboard/UserDashboard";
 import AdminDashboard from "./Pages/AdminAndUserDashboard/AdminDashboard";
-import OnBoardScreen1 from "./Components/OnboardingScreen/OnBoardScreen2";
+import OnBoardScreen1 from "./Components/OnboardingScreen/OnBoardScreen1";
 import OnBoardLoading from "./Components/OnboardingScreen/OnBoardLoading";
 
 const App = () => {
@@ -16,23 +16,19 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<OnBoardScreen1 />} />
+
         <Route path="/login" element={<AuthParent />}>
           <Route index element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>
 
         {/* Dashboard */}
-        <Route path="/commonMenu" element={<CommonMenu/>}>
-  <Route index element={<AdminDashboard/>} />
-  <Route path="userDashboard" element={<UserDashboard/>} />
-  <Route path="admindashboard" element={<AdminDashboard/>} />
-</Route>
-
-
-      
+        <Route path="/commonMenu" element={<CommonMenu />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="userDashboard" element={<UserDashboard />} />
+          <Route path="admindashboard" element={<AdminDashboard />} />
+        </Route>
       </Routes>
-    
-       
     </>
   );
 };

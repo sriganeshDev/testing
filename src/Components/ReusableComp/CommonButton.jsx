@@ -5,6 +5,7 @@ const CommonButton = ({ buttonName, handlesubmit, design, hoverStyles }) => {
   return (
     <>
       <Button
+        type="submit"
         variant="contained"
         color="primary"
         className="mt-4"
