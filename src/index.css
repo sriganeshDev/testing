@@ -11,29 +11,10 @@
         padding: 8px !important;
     }
 }
-/* @media (max-width: 768px) {
-    .css-11s3esg-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
-        width: 100px !important;
-        padding-left: 10px !important;
-    }
-  
-
-} */
- /* .css-2u11ia-MuiInputBase-input-MuiOutlinedInput-input{
-    padding: 9px !important;
- } */
-
-/* @media (max-width: 768px) {
-.css-1yo9csk{
-        margin: 4px !important;
-    }
-} */
 
 
 .heading{
 
-
-   
         font-family: 'Orbitron', sans-serif;
    
 }
@@ -44,9 +25,13 @@
     }
 }
 
+<<<<<<< HEAD
 .css-jiof3z-MuiFormControl-root-MuiTextField-root .MuiOutlinedInput-root{
 padding: 10px !important;
  }
  /* .slick-track{
     height: 150px !important;
  } */
+=======
+
+>>>>>>> d41560c8025ac45cc1564ea4edd3714ccac81f46

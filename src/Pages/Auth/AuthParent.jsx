@@ -38,10 +38,10 @@ import { Outlet } from "react-router-dom";
 
 const AuthParent = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen  ">
+    <div className="flex lg:p-10 md:p-7  flex-col md:flex-row h-screen  ">
       {/* Left side with image and curve */}
       <div
-        className="relative w-full md:w-1/2 h-2/4 md:h-full rounded-l-2xl flex justify-center items-end bg-cover bg-center"
+        className="relative w-full md:w-1/2 h-2/4 md:h-full rounded-l-2xl flex justify-center md:gap-1 items-end bg-cover bg-center"
         style={{
           backgroundImage: `url(https://img.freepik.com/premium-photo/table-with-many-dishes-including-food-including-rice-veggies-other-foods_1086760-97540.jpg?w=1380)`,
         }}
@@ -83,7 +83,7 @@ const AuthParent = () => {
       </div>
 
       {/* Right side (form area) */}
-      <div className="w-full md:w-1/2 h-2/3 md:h-full bg-[#ffffff] rounded-r-2xl flex justify-center max-md:p-3 lg:overflow-y-auto">
+      <div className="w-full md:w-1/2 h-2/3 md:h-full lg:bg-gray-100 md:bg-gray-100  rounded-r-2xl flex justify-center max-md:p-3 ">
         <Outlet />
       </div>
     </div>

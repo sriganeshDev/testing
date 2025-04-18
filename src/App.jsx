@@ -8,7 +8,7 @@ import Login from "./Pages/Auth/Login";
 import Home from "./Pages/Com-HeaderandFooter/Home";
 import UserDashboard from "./Pages/AdminAndUserDashboard/UserDashboard";
 import AdminDashboard from "./Pages/AdminAndUserDashboard/AdminDashboard";
-import OnBoardScreen1 from "./Components/OnboardingScreen/OnBoardScreen2";
+import OnBoardScreen1 from "./Components/OnboardingScreen/OnBoardScreen1";
 import OnBoardLoading from "./Components/OnboardingScreen/OnBoardLoading";
 
 const App = () => {
@@ -16,6 +16,7 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<OnBoardScreen1 />} />
+
         <Route path="/login" element={<AuthParent />}>
           <Route index element={<Login />} />
           <Route path="register" element={<Register />} />
@@ -32,8 +33,6 @@ const App = () => {
 
       
       </Routes>
-    
-       
     </>
   );
 };
